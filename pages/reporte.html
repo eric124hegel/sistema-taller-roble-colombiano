@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reporte - Taller del Roble Colombiano</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="encabezado-sitio">
+      <div class="contenedor">
+        <div class="logo-tipo-sitio">Taller del <span>Roble</span> Colombiano</div>
+        <img src="img/logo-roble.png" alt="Logo Taller Del Roble Colombiano" class="logo-img">
+        <nav class="usuario_navegacion">
+          <div class="avatar_navegacion">JP</div>
+          <span class="nombre_navegacion">Juan Pérez</span>
+          <span class="insignia-rol insignia-carpintero">Carpintero</span>
+          <a href="../index.html" class="btn btn-sm btn-danger"><i class="fas fa-right-from-bracket"></i> Cerrar sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <div class="contenedor">
+        <!-- STEPPER -->
+<nav class="stepper">
+  <div class="step-item done"><div class="step-num"><i class="fas fa-check"></i></div><span class="step-label">Datos del modelo</span></div>
+  <div class="step-line done"></div>
+  <div class="step-item done"><div class="step-num"><i class="fas fa-check"></i></div><span class="step-label">Verificar datos</span></div>
+  <div class="step-line done"></div>
+  <div class="step-item done"><div class="step-num"><i class="fas fa-check"></i></div><span class="step-label">Diseño 3D</span></div>
+  <div class="step-line done"></div>
+  <div class="step-item active"><div class="step-num">4</div><span class="step-label">Reporte</span></div>
+</nav>
+
+        <div class="alert alert-success">
+          <span class="alert-icon"><i class="fas fa-circle-check"></i></span>
+          <div><strong>¡Diseño confirmado exitosamente!</strong> El diseño ha sido registrado. Los planos de construcción están listos para imprimir o descargar.</div>
+        </div>
+
+        <div class="card">
+          <div class="page-header">
+            <h1><i class="fas fa-file-lines text-primary"></i> Reporte de construcción</h1>
+            <p class="text-muted">Closet 200 × 120 × 60cm · Melanina Blanca 18mm · Cliente: María García</p>
+          </div>
+
+          <h3 class="mb-md"><i class="fas fa-boxes-stacked text-primary"></i> Resumen de materiales</h3>
+          <div class="stats-grid" style="grid-template-columns: repeat(4, 1fr);">
+            <div class="stat-card">
+              <div class="stat-value">8</div>
+              <div class="stat-label">Piezas</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">3.2</div>
+              <div class="stat-label">Láminas</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">48</div>
+              <div class="stat-label">Tornillos</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">18m</div>
+              <div class="stat-label">Canto PVC</div>
+            </div>
+          </div>
+
+          <h3 class="mt-lg mb-md"><i class="fas fa-list-ol text-primary"></i> Paso a paso de construcción</h3>
+
+          <div class="paso-item">
+            <div class="paso-num-circle">1</div>
+            <div class="paso-content">
+              <h4>Corte de piezas en melanina</h4>
+              <p>Cortar todas las piezas según el listado. Verificar el sentido de la veta. Usar mesa calibrada.</p>
+            </div>
+          </div>
+
+          <div class="paso-item">
+            <div class="paso-num-circle">2</div>
+            <div class="paso-content">
+              <h4>Canteado y preparación de bordes</h4>
+              <p>Aplicar canto de PVC 2cm a todos los bordes visibles con temperatura de 160°C para una adhesión óptima.</p>
+            </div>
+          </div>
+
+          <div class="paso-item">
+            <div class="paso-num-circle">3</div>
+            <div class="paso-content">
+              <h4>Ensamble de la estructura principal</h4>
+              <p>Armar el cuerpo del closet: laterales, base, techo y paneles divisores con tacos plásticos y tornillos 3.5×35mm.</p>
+            </div>
+          </div>
+
+          <div class="paso-item">
+            <div class="paso-num-circle">4</div>
+            <div class="paso-content">
+              <h4>Instalación de puertas y accesorios</h4>
+              <p>Montar el sistema de puertas corredizas. Instalar los rieles superior e inferior. Ajustar la nivelación final.</p>
+            </div>
+          </div>
+
+          <!-- PDF PREVIEW -->
+          <div class="pdf-preview">
+            <div class="pdf-preview-inner">
+              <i class="fas fa-file-pdf"></i>
+              <div class="info">
+                <strong>reporte_closet_014.pdf</strong>
+                <small>Generado el 13/6/2026 · 2.4MB</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn-group" style="justify-content: center;">
+            <a href="#" class="btn btn-primary"><i class="fas fa-download"></i> Descargar PDF</a>
+            <a href="#" class="btn btn-secondary"><i class="fas fa-print"></i> Imprimir reporte</a>
+            <a href="#" class="btn btn-secondary"><i class="fas fa-print"></i> Imprimir planos</a>
+            <a href="formulario-modelo.html" class="btn btn-success"><i class="fas fa-plus"></i> Crear otro modelo</a>
+          </div>
+
+          <div class="alert alert-info mt-lg">
+            <span class="alert-icon"><i class="fas fa-circle-info"></i></span>
+            <div>El diseño quedó guardado automáticamente en el historial del administrador con <strong>ID #014</strong>. Podrá revisarlo en cualquier momento desde el panel de administración.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      © 2026 Taller del Roble Colombiano - Sistema de gestión de carpintería. Todos los derechos reservados.
+    </footer>
+  </div>
+</body>
+</html>

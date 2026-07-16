@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - Taller del Roble Colombiano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="page-auth">
+    
+    <!-- ========================================== -->
+    <!-- PANEL IZQUIERDO: INFORMACIÓN Y BIENVENIDA -->
+    <!-- ========================================== -->
+    <div class="auth-hero">
+
+      <img src="img/hero-carpinteria.jpg" alt="Taller de carpintería" class="hero-bg-image">
+
+      <div class="auth-hero-content">
+        <h1>Taller del <span>Roble</span> Colombiano</h1>
+        <p class="subtitle-hero">Únete a nuestro sistema integral de gestión para carpintería artesanal y comienza a crear diseños profesionales de mobiliario a medida.</p>
+        
+        <p class="description-hero">
+          Regístrate en menos de 2 minutos y accede a herramientas avanzadas de diseño, control de materiales y generación de reportes automáticos para optimizar tu trabajo.
+        </p>
+
+        <ul class="auth-features">
+          <li>
+            <i class="fas fa-user-plus"></i>
+            <div><strong>Registro rápido</strong><br><small>Completa tus datos y elige tu rol en el sistema</small></div>
+          </li>
+          <li>
+            <i class="fas fa-shield-halved"></i>
+            <div><strong>Verificación de seguridad</strong><br><small>Protege tu cuenta con código OTP por SMS</small></div>
+          </li>
+          <li>
+            <i class="fas fa-graduation-cap"></i>
+            <div><strong>Tutorial de bienvenida</strong><br><small>Aprende a usar el sistema paso a paso</small></div>
+          </li>
+          <li>
+            <i class="fas fa-users-gear"></i>
+            <div><strong>Roles diferenciados</strong><br><small>Carpintero o Administrador según tu función</small></div>
+          </li>
+          <li>
+            <i class="fas fa-lock"></i>
+            <div><strong>Datos protegidos</strong><br><small>Tu información está segura con nosotros</small></div>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- PANEL DERECHO: FORMULARIO DE REGISTRO     -->
+    <!-- ========================================== -->
+    <div class="auth-form-side">
+      <div class="auth-form-wrapper">
+        <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Volver al inicio de sesión</a>
+        <h2>Únete al sistema</h2>
+        <p class="subtitle">Completa el formulario para crear tu cuenta</p>
+
+        <form action="verificacion.html" method="get">
+          <div class="form-grid-2">
+            <div class="grupo_form">
+              <label class="form-label" for="nombre">Nombre <span class="req">*</span></label>
+              <input class="control_form" type="text" id="nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="grupo_form">
+              <label class="form-label" for="apellidos">Apellidos <span class="req">*</span></label>
+              <input class="control_form" type="text" id="apellidos" placeholder="Tus apellidos" required>
+            </div>
+          </div>
+
+          <div class="grupo_form">
+            <label class="form-label" for="telefono">Número telefónico <span class="req">*</span></label>
+            <input class="control_form" type="tel" id="telefono" placeholder="+57 300 000 0000" required>
+            <span class="pista_form">Se usará para verificación de seguridad</span>
+          </div>
+
+          <div class="grupo_form">
+            <label class="form-label" for="email">Correo electrónico <span class="req">*</span></label>
+            <input class="control_form" type="email" id="email" placeholder="correo@ejemplo.com" required>
+          </div>
+
+          <div class="grupo_form">
+            <label class="form-label" for="usuario">Usuario <span class="req">*</span></label>
+            <input class="control_form" type="text" id="usuario" placeholder="nombre_usuario" required>
+            <span class="pista_form">Solo letras, números y guiones bajos</span>
+          </div>
+
+          <div class="grupo_form">
+            <label class="form-label" for="password">Contraseña <span class="req">*</span></label>
+            <input class="control_form" type="password" id="password" placeholder="Mínimo 8 caracteres" required>
+            <span class="pista_form">Usa mayúsculas, números y símbolos para mayor seguridad</span>
+          </div>
+
+          <div class="grupo_form">
+            <label class="form-label">Rol en el sistema <span class="req">*</span></label>
+            <div class="model-grid" style="grid-template-columns: 1fr 1fr;">
+              <label class="model-card selected">
+                <input type="radio" name="rol" value="carpintero" checked style="display:none;">
+                <i class="fas fa-hammer"></i>
+                <h4>Carpintero</h4>
+                <p>Diseño y construcción de modelos</p>
+              </label>
+              <label class="model-card">
+                <input type="radio" name="rol" value="admin" style="display:none;">
+                <i class="fas fa-user-tie"></i>
+                <h4>Administrador</h4>
+                <p>Gestión de historial y reportes</p>
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-full">
+            <i class="fas fa-user-plus"></i> Registrarse
+          </button>
+        </form>
+
+        <div class="auth-footer">
+          ¿Ya tienes cuenta? <a href="../index.html"><strong>Inicia sesión aquí</strong></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

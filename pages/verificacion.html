@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificación - Taller del Roble Colombiano</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="page-auth">
+    <div class="auth-hero">
+
+      <img src="img/hero-carpinteria.jpg" alt="Taller de carpintería" class="hero-bg-image">
+
+      <div class="auth-hero-content">
+        <h1>Taller del <span>Roble</span> Colombiano</h1>
+        <p>Seguridad de doble factor para proteger tu cuenta.</p>
+        <ul class="auth-features">
+          <li><i class="fas fa-shield-halved"></i> Verificación por SMS</li>
+          <li><i class="fas fa-lock"></i> Código de 6 dígitos</li>
+          <li><i class="fas fa-clock"></i> Válido por 5 minutos</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="auth-form-side">
+      <div class="auth-form-wrapper">
+        <h2>Verificación de seguridad</h2>
+        <p class="subtitle">Hemos enviado un código de 6 dígitos a tu teléfono</p>
+
+        <div class="alert alert-info" role="status">
+          <span class="alert-icon"><i class="fas fa-mobile-screen"></i></span>
+          <div>Código enviado al número <strong>+57 ****** 5896</strong></div>
+        </div>
+
+        <form action="tutorial.html" method="get">
+          <div class="grupo_form">
+            <label class="form-label" for="otp">Código de verificación <span class="req">*</span></label>
+            <input class="control_form otp-input" type="text" inputmode="numeric" maxlength="6" id="otp" placeholder="000000" required>
+          </div>
+
+          <div class="countdown">
+            El código expira en <strong>4:59</strong>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-full mt-md">
+            <i class="fas fa-check-circle"></i> Verificar código
+          </button>
+        </form>
+
+        <div class="auth-footer">
+          ¿No recibiste el código? <a href="#"><strong>Reenviar código</strong></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

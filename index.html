@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión - Taller del Roble Colombiano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="page-auth">
+    <!-- LADO IZQUIERDO: HERO -->
+    <div class="auth-hero">
+
+      <img src="img/hero-carpinteria.jpg" alt="Taller de carpintería" class="hero-bg-image">
+
+      <div class="auth-hero-content">
+        <h1>Taller del <span>Roble</span> Colombiano</h1>
+        <p>Sistema integral de gestión para carpintería artesanal y diseño de mobiliario a medida.</p>
+        <ul class="auth-features">
+          <li><i class="fas fa-couch"></i> Diseño de muebles y closets</li>
+          <li><i class="fas fa-cube"></i> Crea modelos 3D con medidas exactas</li>
+          <li><i class="fas fa-boxes-stacked"></i> Control de materiales</li>
+          <li><i class="fas fa-users-gear"></i> Roles y permisos</li>
+          <li><i class="fas fa-clock-rotate-left"></i> Historial completo</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- LADO DERECHO: FORMULARIO -->
+    <div class="auth-form-side">
+      <div class="auth-form-wrapper">
+        <h2>Iniciar sesión</h2>
+        <p class="subtitle">Ingresa tus credenciales para acceder al sistema</p>
+
+        <!-- FORMULARIO CON VALIDACIÓN -->
+<form action="#" method="post" id="form-login">
+  
+  <!-- ALERTA DE ERROR GENERAL (arriba del formulario) -->
+  <div class="alert alert-error" id="login-error" role="alert" style="display: none;">
+    <span class="alert-icon"><i class="fas fa-circle-exclamation"></i></span>
+    <div><strong>Credenciales incorrectas.</strong> Verifica tu usuario y contraseña e intenta nuevamente.</div>
+  </div>
+
+  <!-- CAMPO USUARIO -->
+  <div class="grupo_form">
+    <label class="form-label" for="usuario">Usuario <span class="req">*</span></label>
+    <input 
+      class="control_form" 
+      type="text" 
+      id="usuario" 
+      name="usuario" 
+      placeholder="Ingresa tu nombre de usuario" 
+      required
+      minlength="3"
+      autocomplete="username"
+    >
+    <span class="form-error" id="error-usuario">
+      <i class="fas fa-exclamation-circle"></i> Usuario incorrecto
+    </span>
+  </div>
+
+  <!-- CAMPO CONTRASEÑA -->
+  <div class="grupo_form">
+    <label class="form-label" for="password">Contraseña <span class="req">*</span></label>
+    <input 
+      class="control_form" 
+      type="password" 
+      id="password" 
+      name="password" 
+      placeholder="Ingresa tu contraseña" 
+      required
+      minlength="6"
+      autocomplete="current-password"
+    >
+    <span class="form-error" id="error-password">
+      <i class="fas fa-exclamation-circle"></i> Contraseña incorrecta
+    </span>
+    <a href="#" class="pista_form" style="align-self: flex-end; margin-top: 4px;">¿Olvidaste tu contraseña?</a>
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-lg btn-full">
+    <i class="fas fa-right-to-bracket"></i> Iniciar sesión
+  </button>
+</form>
+
+        <div class="auth-footer">
+          ¿No tienes cuenta? <a href="pages/registro.html"><strong>Regístrate aquí</strong></a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

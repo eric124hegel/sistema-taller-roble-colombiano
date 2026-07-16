@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial - Taller del Roble Colombiano</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="encabezado-sitio">
+      <div class="contenedor">
+        <div class="logo-tipo-sitio">Taller del <span>Roble</span> Colombiano</div>
+        <img src="img/logo-roble.png" alt="Logo Taller Del Roble Colombiano" class="logo-img">
+        <nav class="usuario_navegacion">
+          <div class="avatar_navegacion">JP</div>
+          <span class="nombre_navegacion">Juan Pérez</span>
+          <span class="insignia-rol insignia-carpintero">Carpintero</span>
+          <a href="../index.html" class="btn btn-sm btn-danger"><i class="fas fa-right-from-bracket"></i> Cerrar sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <div class="tutorial-container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-md);">
+          <div>
+            <h1>Bienvenido al sistema</h1>
+            <p class="text-muted">Aprende cómo usar el sistema en 5 pasos sencillos</p>
+          </div>
+          <a href="tutorial-completado.html" class="btn btn-secondary btn-sm">Saltar tutorial</a>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-sm);">
+          <span class="text-muted" style="font-size: 13px;">Paso 1 de 5</span>
+          <span class="text-primary" style="font-weight: 700;">20%</span>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 20%;"></div>
+        </div>
+
+        <div class="tutorial-card">
+          <div class="icon-big"><i class="fas fa-ruler-combined"></i></div>
+          <h2>Registrar dimensiones del modelo</h2>
+          <p>Comienza por ingresar el tipo de mueble o closet que deseas construir. Indica el alto, ancho y largo en centímetros. Estas medidas son la base de todo el proceso de diseño.</p>
+
+          <div class="step-tip">
+            <strong><i class="fas fa-lightbulb"></i> Consejo</strong>
+            <p>Usa una cinta métrica para verificar las medidas del espacio donde irá el mueble antes de ingresar los datos al sistema.</p>
+          </div>
+        </div>
+
+        <div class="btn-group" style="justify-content: space-between;">
+          <a href="#" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Paso anterior</a>
+          <a href="tutorial-completado.html" class="btn btn-primary">Siguiente paso <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      © 2026 Taller del Roble Colombiano - Sistema de gestión de carpintería. Todos los derechos reservados.
+    </footer>
+  </div>
+</body>
+</html>

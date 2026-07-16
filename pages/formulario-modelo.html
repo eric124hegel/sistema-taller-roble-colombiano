@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuevo Modelo - Taller del Roble Colombiano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="encabezado-sitio">
+      <div class="contenedor">
+        <div class="logo-tipo-sitio">Taller del <span>Roble</span> Colombiano</div>
+        <img src="img/logo-roble.png" alt="Logo Taller Del Roble Colombiano" class="logo-img">
+        <nav class="usuario_navegacion">
+          <div class="avatar_navegacion">JP</div>
+          <span class="nombre_navegacion">Juan Pérez</span>
+          <span class="insignia-rol insignia-carpintero">Carpintero</span>
+          <a href="../index.html" class="btn btn-sm btn-danger"><i class="fas fa-right-from-bracket"></i> Cerrar sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <div class="contenedor">
+        <!-- STEPPER -->
+<nav class="stepper stepper-form">
+  <div class="step-item active"><div class="step-num">1</div><span class="step-label">Datos del modelo</span></div>
+  <div class="step-line"></div>
+  <div class="step-item"><div class="step-num">2</div><span class="step-label">Verificar datos</span></div>
+  <div class="step-line"></div>
+  <div class="step-item"><div class="step-num">3</div><span class="step-label">Diseño 3D</span></div>
+  <div class="step-line"></div>
+  <div class="step-item"><div class="step-num">4</div><span class="step-label">Reporte</span></div>
+</nav>
+
+        <div class="card">
+          <div class="page-header">
+            <h1><i class="fas fa-plus-circle text-primary"></i> Nuevo Modelo</h1>
+            <p class="text-muted">Los campos con <span style="color: var(--color-error);">*</span> son obligatorios</p>
+          </div>
+
+          <form id="form-modelo" action="validar-datos.html" method="get" novalidate>
+  
+  <!-- ============================================ -->
+  <!-- PASO 1: DIMENSIONES GENERALES                -->
+  <!-- ============================================ -->
+  <div class="form-step" data-step="1">
+    <h3 class="mb-md">Paso 1: Dimensiones generales</h3>
+
+    <div class="grupo_form">
+      <label class="form-label">Tipo de modelo <span class="req">*</span></label>
+      <div class="model-grid">
+        <label class="model-card selected">
+          <input type="radio" name="tipo" value="closet" checked style="display:none;">
+          <i class="fas fa-door-closed"></i>
+          <h4>Closet</h4>
+          <p>Armario o ropero</p>
+        </label>
+        <label class="model-card">
+          <input type="radio" name="tipo" value="mueble" style="display:none;">
+          <i class="fas fa-couch"></i>
+          <h4>Mueble</h4>
+          <p>Mueble general</p>
+        </label>
+        <label class="model-card">
+          <input type="radio" name="tipo" value="otro" style="display:none;">
+          <i class="fas fa-shapes"></i>
+          <h4>Otro</h4>
+          <p>Otro tipo</p>
+        </label>
+      </div>
+    </div>
+
+    <h3 class="mt-lg mb-md">Medidas del modelo</h3>
+    <div class="form-grid-3">
+      <div class="grupo_form">
+        <label class="form-label" for="alto">Alto <span class="req">*</span></label>
+        <input class="control_form" type="number" id="alto" name="alto" placeholder="ej. 200" required>
+        <span class="pista_form">En centímetros</span>
+        <span class="form-error" id="error-alto">
+          <i class="fas fa-exclamation-circle"></i> Este campo es obligatorio
+        </span>
+      </div>
+      <div class="grupo_form">
+        <label class="form-label" for="ancho">Ancho <span class="req">*</span></label>
+        <input class="control_form" type="number" id="ancho" name="ancho" placeholder="ej. 120" required>
+        <span class="pista_form">En centímetros</span>
+        <span class="form-error" id="error-ancho">
+          <i class="fas fa-exclamation-circle"></i> Este campo es obligatorio
+        </span>
+      </div>
+      <div class="grupo_form">
+        <label class="form-label" for="largo">Largo <span class="req">*</span></label>
+        <input class="control_form" type="number" id="largo" name="largo" placeholder="ej. 60" required>
+        <span class="pista_form">En centímetros</span>
+        <span class="form-error" id="error-largo">
+          <i class="fas fa-exclamation-circle"></i> Este campo es obligatorio
+        </span>
+      </div>
+    </div>
+
+    <div class="form-grid-2">
+      <div class="grupo_form">
+        <label class="form-label" for="grosor">Grosor melanina <span class="req">*</span></label>
+        <select class="control_form" id="grosor" name="grosor" required>
+          <option value="">Selecciona el grosor...</option>
+          <option value="18">18 mm</option>
+          <option value="15">15 mm</option>
+          <option value="12">12 mm</option>
+        </select>
+        <span class="form-error" id="error-grosor">
+          <i class="fas fa-exclamation-circle"></i> Debes seleccionar un grosor
+        </span>
+      </div>
+      <div class="grupo_form">
+        <label class="form-label" for="color">Color melanina <span class="opt">(opcional)</span></label>
+        <select class="control_form" id="color" name="color">
+          <option value="">Selecciona color...</option>
+          <option value="blanco">Blanco</option>
+          <option value="negro">Negro</option>
+          <option value="roble">Roble</option>
+          <option value="nogal">Nogal</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="btn-group" style="justify-content: flex-end;">
+      <button type="button" class="btn btn-primary btn-lg btn-next" data-next="2">Siguiente <i class="fas fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- PASO 2: DISTRIBUCIÓN INTERNA                 -->
+  <!-- ============================================ -->
+  <div class="form-step" data-step="2" style="display: none;">
+    <h3 class="mb-md">Paso 2: Distribución interna</h3>
+    
+    <div class="form-grid-2">
+      <div class="grupo_form">
+        <label class="form-label" for="compartimentos">Compartimentos <span class="req">*</span></label>
+        <select class="control_form" id="compartimentos" name="compartimentos" required>
+          <option>1 compartimento</option>
+          <option selected>2 compartimentos</option>
+          <option>3 compartimentos</option>
+          <option>4 compartimentos</option>
+        </select>
+        <span class="pista_form">Secciones verticales del mueble</span>
+      </div>
+      <div class="grupo_form">
+        <label class="form-label" for="entrepanos">Entrepaños <span class="req">*</span></label>
+        <select class="control_form" id="entrepanos" name="entrepanos" required>
+          <option>1 entrepaño</option>
+          <option selected>2 entrepaños</option>
+          <option>3 entrepaños</option>
+          <option>4 entrepaños</option>
+        </select>
+        <span class="pista_form">Estantes horizontales internos</span>
+      </div>
+    </div>
+
+    <div class="toggle-row">
+      <div class="toggle-label">
+        <strong>Cajones</strong>
+        <small>¿El mueble llevará cajones deslizantes?</small>
+      </div>
+      <label class="toggle">
+        <input type="checkbox" name="cajones">
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+
+    <div class="toggle-row">
+      <div class="toggle-label">
+        <strong>Barra colgadora</strong>
+        <small>¿El closet incluirá barra para colgar ropa?</small>
+      </div>
+      <label class="toggle">
+        <input type="checkbox" name="barra" checked>
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+
+    <div class="conditional-block">
+      <div class="grupo_form" style="margin-bottom: 0;">
+        <label class="form-label" for="altura-barra">Altura de la barra (cm)</label>
+        <input class="control_form" type="number" id="altura-barra" name="altura-barra" value="150">
+      </div>
+    </div>
+
+    <div class="btn-group" style="justify-content: space-between;">
+      <button type="button" class="btn btn-secondary btn-prev" data-prev="1"><i class="fas fa-arrow-left"></i> Anterior</button>
+      <button type="button" class="btn btn-primary btn-lg btn-next" data-next="3">Siguiente <i class="fas fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- PASO 3: ACABADOS Y EXTRAS                    -->
+  <!-- ============================================ -->
+  <div class="form-step" data-step="3" style="display: none;">
+    <h3 class="mb-md">Paso 3: Acabados y extras</h3>
+
+    <div class="toggle-row">
+      <div class="toggle-label">
+        <strong>Puertas</strong>
+        <small>¿El mueble tendrá puertas?</small>
+      </div>
+      <label class="toggle">
+        <input type="checkbox" name="puertas" checked>
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+
+    <div class="conditional-block">
+      <div class="form-grid-2">
+        <div class="grupo_form">
+          <label class="form-label" for="tipo-puerta">Tipo de puerta</label>
+          <select class="control_form" id="tipo-puerta" name="tipo-puerta">
+            <option selected>Corrediza</option>
+            <option>Batiente</option>
+          </select>
+        </div>
+        <div class="grupo_form">
+          <label class="form-label" for="num-puertas">Número de puertas</label>
+          <select class="control_form" id="num-puertas" name="num-puertas">
+            <option>1 puerta</option>
+            <option selected>2 puertas</option>
+            <option>3 puertas</option>
+            <option>4 puertas</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="toggle-row">
+      <div class="toggle-label">
+        <strong>Zócalo</strong>
+        <small>Friso decorativo en la base del mueble</small>
+      </div>
+      <label class="toggle">
+        <input type="checkbox" name="zocalo">
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+
+    <div class="toggle-row">
+      <div class="toggle-label">
+        <strong>Fondo trasero</strong>
+        <small>Panel posterior del mueble</small>
+      </div>
+      <label class="toggle">
+        <input type="checkbox" name="fondo" checked>
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+
+    <div class="conditional-block">
+      <div class="grupo_form" style="margin-bottom: 0;">
+        <label class="form-label" for="material-fondo">Material del fondo</label>
+        <select class="control_form" id="material-fondo" name="material-fondo">
+          <option selected>MDF 3mm</option>
+          <option>Melanina 6mm</option>
+          <option>Triplex 4mm</option>
+        </select>
+      </div>
+    </div>
+
+    <h3 class="mt-lg mb-md">Información del cliente</h3>
+    <div class="form-grid-2">
+      <div class="grupo_form">
+        <label class="form-label" for="cliente">Nombre del cliente <span class="req">*</span></label>
+        <input class="control_form" type="text" id="cliente" name="cliente" placeholder="Nombre completo del cliente" required>
+        <span class="form-error" id="error-cliente">
+          <i class="fas fa-exclamation-circle"></i> Debes ingresar el nombre del cliente
+        </span>
+      </div>
+      <div class="grupo_form">
+        <label class="form-label" for="fecha">Fecha de entrega <span class="opt">(opcional)</span></label>
+        <input class="control_form" type="date" id="fecha" name="fecha">
+        <span class="pista_form">Fecha estimada de entrega al cliente</span>
+      </div>
+    </div>
+
+    <div class="grupo_form">
+      <label class="form-label" for="observaciones">Observaciones <span class="opt">(opcional)</span></label>
+      <textarea class="control_form" id="observaciones" name="observaciones" placeholder="Notas adicionales sobre el diseño, acabados especiales, preferencias del cliente..."></textarea>
+    </div>
+
+    <div class="btn-group" style="justify-content: space-between;">
+      <button type="button" class="btn btn-secondary btn-prev" data-prev="2"><i class="fas fa-arrow-left"></i> Anterior</button>
+      <button type="submit" class="btn btn-primary btn-lg">Registrar datos <i class="fas fa-check"></i></button>
+    </div>
+  </div>
+
+</form>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      © 2026 Taller del Roble Colombiano - Sistema de gestión de carpintería. Todos los derechos reservados.
+    </footer>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

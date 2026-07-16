@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle #014 - Taller del Roble Colombiano</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="encabezado-sitio">
+      <div class="contenedor">
+        <div class="logo-tipo-sitio">Taller del <span>Roble</span> Colombiano</div>
+        <img src="img/logo-roble.png" alt="Logo Taller Del Roble Colombiano" class="logo-img">
+        <nav class="usuario_navegacion">
+          <div class="avatar_navegacion">LM</div>
+          <span class="nombre_navegacion">Laura Medina</span>
+          <span class="insignia-rol insignia-admin">Administrador</span>
+          <a href="../index.html" class="btn btn-sm btn-danger"><i class="fas fa-right-from-bracket"></i> Cerrar sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <div class="contenedor">
+        <a href="historial.html" class="back-link"><i class="fas fa-arrow-left"></i> Volver al historial</a>
+
+        <div class="page-header">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: var(--spacing-md);">
+            <div>
+              <h1><i class="fas fa-eye text-primary"></i> Diseño #014 - Closet</h1>
+              <p class="text-muted">Creado por Juan Pérez · Hoy, 9:14am · Closet 200×120×60 cm · Melanina Blanca 18mm</p>
+            </div>
+            <span class="badge-readonly"><i class="fas fa-lock"></i> Solo lectura</span>
+          </div>
+        </div>
+
+        <div class="alert alert-warning">
+          <span class="alert-icon"><i class="fas fa-shield-halved"></i></span>
+          <div><strong>Restricción de rol:</strong> No tienes permiso para modificar este diseño. El historial de diseños es de solo lectura para el rol Administrador.</div>
+        </div>
+
+        <div class="detalle-grid">
+          <!-- COLUMNA PRINCIPAL -->
+          <div>
+            <div class="card">
+              <h3><i class="fas fa-cube text-primary"></i> Vista 3D - Solo lectura</h3>
+              <div class="visor-3d">
+                <div class="visor-wrap">
+                  <div class="visor-placeholder">
+                    <i class="fas fa-cube"></i>
+                    <h3>Vista 3D del diseño</h3>
+                    <p>200 × 120 × 60 cm</p>
+                  </div>
+                  <div class="visor-controls">
+                    <button title="Girar"><i class="fas fa-rotate"></i></button>
+                    <button title="Zoom +"><i class="fas fa-magnifying-glass-plus"></i></button>
+                    <button title="Zoom -"><i class="fas fa-magnifying-glass-minus"></i></button>
+                  </div>
+                </div>
+              </div>
+
+              <h3 class="mt-lg"><i class="fas fa-list-check text-primary"></i> Lista de piezas (8 piezas en total)</h3>
+              <div class="table-responsive mt-md">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Pieza</th>
+                      <th>Medida</th>
+                      <th>Cant.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Panel lateral izq.</td><td>200 × 60 cm</td><td>×1</td></tr>
+                    <tr><td>Panel lateral der.</td><td>200 × 60 cm</td><td>×1</td></tr>
+                    <tr><td>Base inferior</td><td>120 × 60 cm</td><td>×1</td></tr>
+                    <tr><td>Techo</td><td>120 × 60 cm</td><td>×1</td></tr>
+                    <tr><td>Entrepaño 1</td><td>118 × 58 cm</td><td>×2</td></tr>
+                    <tr><td>Puerta izq.</td><td>190 × 58 cm</td><td>×1</td></tr>
+                    <tr><td>Puerta der.</td><td>190 × 58 cm</td><td>×1</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- PANEL LATERAL -->
+          <aside>
+            <div class="card card-sm">
+              <h3><i class="fas fa-coins text-primary"></i> Materiales y costos</h3>
+              <div class="summary-row"><span class="summary-key">Láminas melanina 18mm</span><span class="summary-val">3.2 láminas</span></div>
+              <div class="summary-row"><span class="summary-key">Costo por lámina</span><span class="summary-val">$85.000</span></div>
+              <div class="summary-row"><span class="summary-key">Tornillos 3.5×35mm</span><span class="summary-val">48 unidades</span></div>
+              <div class="summary-row"><span class="summary-key">Tacos plásticos</span><span class="summary-val">48 unidades</span></div>
+              <div class="summary-row"><span class="summary-key">Canto PVC 2cm</span><span class="summary-val">18 m lineales</span></div>
+
+              <div class="costo-total">
+                <div class="label">Costo total estimado</div>
+                <div class="value">$272.000</div>
+              </div>
+            </div>
+
+            <div class="card card-sm">
+              <h3><i class="fas fa-download text-primary"></i> Acciones</h3>
+              <a href="#" class="btn btn-primary btn-full mb-md"><i class="fas fa-file-pdf"></i> Descargar reporte PDF</a>
+              <div class="alert alert-info" style="margin-bottom: 0;">
+                <small><i class="fas fa-circle-info"></i> <strong>Proveedor recomendado:</strong> Para melanina blanca 18mm, consultar con Ferretería Maderas del Norte. Tel: 601-234-5678.</small>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      © 2026 Taller del Roble Colombiano - Sistema de gestión de carpintería. Todos los derechos reservados.
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historial - Taller del Roble Colombiano</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="encabezado-sitio">
+      <div class="contenedor">
+        <div class="logo-tipo-sitio">Taller del <span>Roble</span> Colombiano</div>
+        <img src="img/logo-roble.png" alt="Logo Taller Del Roble Colombiano" class="logo-img">
+        <nav class="usuario_navegacion">
+          <div class="avatar_navegacion">LM</div>
+          <span class="nombre_navegacion">Laura Medina</span>
+          <span class="insignia-rol insignia-admin">Administrador</span>
+          <a href="../index.html" class="btn btn-sm btn-danger"><i class="fas fa-right-from-bracket"></i> Cerrar sesión</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <div class="contenedor">
+        <div class="page-header">
+          <h1><i class="fas fa-clock-rotate-left text-primary"></i> Historial de diseños</h1>
+          <p class="text-muted"><i class="fas fa-lock"></i> Solo lectura - no se pueden modificar los diseños registrados</p>
+        </div>
+
+        <!-- STATS -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value">47</div>
+            <div class="stat-label">Total diseños</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">2</div>
+            <div class="stat-label">Diseños nuevos</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">45</div>
+            <div class="stat-label">Revisados</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">12</div>
+            <div class="stat-label">Este mes</div>
+          </div>
+        </div>
+
+        <!-- SEARCH & FILTERS -->
+        <div class="search-bar">
+          <i class="fas fa-magnifying-glass"></i>
+          <input type="text" placeholder="Buscar por ID, carpintero o tipo de modelo...">
+        </div>
+
+        <div class="filter-tabs">
+          <button class="filter-tab active">Todos</button>
+          <button class="filter-tab">Nuevos</button>
+          <button class="filter-tab">Revisados</button>
+        </div>
+
+        <!-- TABLE -->
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Creado por</th>
+                <th>Tipo</th>
+                <th>Medidas (cm)</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>#014</strong></td>
+                <td>Juan Pérez<br><small class="text-muted">Carpintero</small></td>
+                <td>Closet</td>
+                <td>200×120×60</td>
+                <td>Hoy, 9:14am</td>
+                <td><span class="badge-new">Nuevo</span></td>
+                <td><a href="detalle-admin.html" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i> Ver</a></td>
+              </tr>
+              <tr>
+                <td><strong>#013</strong></td>
+                <td>Luis Gonzalez<br><small class="text-muted">Carpintero</small></td>
+                <td>Mueble</td>
+                <td>90×180×45</td>
+                <td>Hace 2 horas</td>
+                <td><span class="badge-new">Nuevo</span></td>
+                <td><a href="detalle-admin.html" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i> Ver</a></td>
+              </tr>
+              <tr>
+                <td><strong>#012</strong></td>
+                <td>Juan Pérez<br><small class="text-muted">Carpintero</small></td>
+                <td>Closet</td>
+                <td>210×110×55</td>
+                <td>Ayer, 3:45pm</td>
+                <td><span class="badge-reviewed">Revisado</span></td>
+                <td><a href="detalle-admin.html" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i> Ver</a></td>
+              </tr>
+              <tr>
+                <td><strong>#011</strong></td>
+                <td>María Torres<br><small class="text-muted">Carpintero</small></td>
+                <td>Mueble</td>
+                <td>150×80×40</td>
+                <td>Ayer, 11:20am</td>
+                <td><span class="badge-reviewed">Revisado</span></td>
+                <td><a href="detalle-admin.html" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i> Ver</a></td>
+              </tr>
+              <tr>
+                <td><strong>#010</strong></td>
+                <td>Carlos Ruiz<br><small class="text-muted">Carpintero</small></td>
+                <td>Otro</td>
+                <td>100×60×35</td>
+                <td>21/03, 2:10pm</td>
+                <td><span class="badge-reviewed">Revisado</span></td>
+                <td><a href="detalle-admin.html" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i> Ver</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="text-center mt-lg text-muted">
+          Mostrando 5 de 47 diseños
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      © 2026 Taller del Roble Colombiano - Sistema de gestión de carpintería. Todos los derechos reservados.
+    </footer>
+  </div>
+</body>
+</html>
