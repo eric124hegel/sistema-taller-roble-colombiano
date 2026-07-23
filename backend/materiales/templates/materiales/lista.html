@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Materiales . Taller del Roble Colombiano</title>
+</head>
+<body>
+    <h1>Inventario de materiales</h1>
+
+    <table border="1" cellpadding="8">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Unidad Medida</th>
+                <th>Costo</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for m in materiales %}
+            <tr>
+                <td>{{ m.id_material }}</td>
+                <td>{{ m.nombre_material }}</td>
+                <td>{{ m.tipo_material }}</td>
+                <td>{{ m.unidad_medida }}</td>
+                <td>{{ m.costo_unitario }}</td>
+                <td>{{ m.stock }}</td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="6">No hay materiales registrados todavia.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br/>
+    <a href="{% url 'materiales:registrar' %}">Registrar nuevo material</a>
+</body>
+</html>
